@@ -1,0 +1,83 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+.code-container {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9ecef;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #495057;
+    position: relative;
+    margin: -20px -20px 0 -20px;
+}
+
+.language {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.copy-button {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.copy-button:hover {
+    background-color: #e2e6ea;
+}
+
+pre {
+    margin: 0;
+    font-size: 16px;
+}
+
+.code-editable {
+    outline: none;
+    white-space: pre-wrap; /* Allows text wrapping */
+    padding-top: 10px;
+}
+
+code {
+    color: #495057;
+}
+
+code .method {
+    color: #007bff;
+}
+
+code .param {
+    color: #28a745;
+}
+
+code .print {
+    color: #6f42c1;
+}
+
+code .function {
+    color: #17a2b8;
+}
+
+code .keyword {
+    color: #dc3545;
+}
