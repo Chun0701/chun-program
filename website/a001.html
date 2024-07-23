@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Snippet</title>
+    <link rel="stylesheet" href="a001.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Chun 的程式日記</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="index.html" style="--i:0">Home</a>
+            <a href="#" style="--i:1">IoT</a>
+            <a href="Zerojudge.html" style="--i:2">Zerojudge</a>
+            <a href="#" style="--i:3">Line Bot</a>
+            <a href="#" style="--i:4">About</a>
+        </nav>
+    </header>
+    <div class="code-container">
+        <div class="nk">
+            <span class="language">Python</span>
+            <button class="copy-button" onclick="copyCode()">Copy</button>
+        </div>
+        <pre contenteditable="true" class="code-editable">
+            <code class="python">
+<span class="method">s=input()</span>
+<span class="print">print("hello," ,s)</span>
+            </code>
+        </pre>
+    </div>
+    <script>
+        function copyCode() {
+            const code = document.querySelector('.code-editable').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy code: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
