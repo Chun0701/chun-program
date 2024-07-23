@@ -142,13 +142,34 @@ body {
     top: calc(100px + 80px); /* 距离顶部 100px (header 的高度) 加上 80px */
     left: 50%; /* 相对于视口的左边缘的 50% */
     transform: translateX(-50%); /* 将其自身宽度的 50% 向左移动，从而水平居中 */
-    width: 600px; /* 设置固定宽度 */
+    width: 80%; /* 设置相对宽度，初始为 80% */
+    max-width: 600px; /* 设置最大宽度 */
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 5px;
     overflow: auto;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     z-index: 10; /* 确保在 .header 上方 */
+}
+
+@media (max-width: 992px) {
+    .code-container {
+        width: 90%; /* 当屏幕宽度小于 992px 时，宽度变为 90% */
+    }
+}
+
+@media (max-width: 768px) {
+    .code-container {
+        width: 95%; /* 当屏幕宽度小于 768px 时，宽度变为 95% */
+    }
+}
+
+@media (max-width: 576px) {
+    .code-container {
+        width: 100%; /* 当屏幕宽度小于 576px 时，宽度变为 100% */
+        left: 0; /* 调整left属性 */
+        transform: none; /* 移除transform属性 */
+    }
 }
 
 .code-container {
